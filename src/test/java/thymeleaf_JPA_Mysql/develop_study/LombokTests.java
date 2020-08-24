@@ -14,4 +14,11 @@ public class LombokTests {
         System.out.println(board);
     }
 
+    @Test
+    public void testRequriedArgsConstructor(){
+        Board board = new Board("테스트 제목");
+
+        System.out.println(board);
+    }
+
 }
