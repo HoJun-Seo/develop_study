@@ -10,7 +10,7 @@ import java.util.Date;
 @RequiredArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode(of = "boardNo")
+@EqualsAndHashCode(of = "boardNo") // 자바의 equals 메서드와  hashCode() 메서드를 생성한다.
 @ToString
 public class Board{
 
