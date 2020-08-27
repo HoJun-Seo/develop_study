@@ -1,10 +1,12 @@
 package thymeleaf_JPA_Mysql.develop_study.domain;
 
-import lombok.ToString;
+import lombok.*;
 
+@RequiredArgsConstructor
 @ToString(exclude = "userName")
 public class Member {
-    private String userId;
-    private String password;
+
+    private final String userId;
+    private final String password;
     private String userName;
 }
