@@ -7,6 +7,7 @@ import thymeleaf_JPA_Mysql.develop_study.domain.Member;
 import thymeleaf_JPA_Mysql.develop_study.domain.Student;
 import thymeleaf_JPA_Mysql.develop_study.domain.UserItem;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -45,7 +46,7 @@ public class LombokTests {
 
     @Test
     public void testToString(){
-        Board board = new Board();
+        Board board = new Board(1);
 
         System.out.println(board);
     }
@@ -152,4 +153,26 @@ public class LombokTests {
 
         System.out.println(member);
     }
+
+    @Test
+    public void testAllArgsConstructor(){
+        Board board = new Board(1, "title", "content1", "writer1", new Date());
+
+        System.out.println(board);
+    }
+
+    @Test
+    public void testAllArgsConstructor2(){
+        Member member = new Member("userId1", "password1", "userName1");
+
+        System.out.println(member);
+    }
+
+    @Test
+    public void testGetterSetter(){
+        Board board = new Board(1);
+        board.setTitle("게시판 제목");
+        System.out.println(board.getTitle());
+    }
+
 }
